@@ -117,5 +117,6 @@ Feedstock Maintainers
 =====================
 
 * [@DamianB-BitFlipper](https://github.com/DamianB-BitFlipper/)
+* [@janjagusch](https://github.com/janjagusch/)
 * [@xhochy](https://github.com/xhochy/)
 
