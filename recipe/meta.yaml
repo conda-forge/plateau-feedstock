@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   
 requirements:
   host:
@@ -28,7 +28,7 @@ requirements:
     - numpy !=1.15.0,!=1.16.0
     - pandas >=0.23.0,!=1.0.0
     - prompt-toolkit
-    - pyarrow >=0.17.1,!=1.0.0,<5
+    - pyarrow >=0.17.1,!=1.0.0
     - python >=3.6
     - pyyaml
     - simplejson
