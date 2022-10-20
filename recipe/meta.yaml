@@ -1,5 +1,5 @@
 {% set name = "plateau" %}
-{% set version = "4.1.1" %}
+{% set version = "4.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plateau-{{ version }}.tar.gz
-  sha256: 6f0e63296c522fb0b54691b1e76612b095935c3f475e5a3cf1c7a89329c58505
+  sha256: 205b91fd7aee8d1a93f35bac90c2a118866b075086063e84cce22b505053d558
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
     - setuptools-scm
   run:
     - attrs
@@ -29,8 +29,8 @@ requirements:
     - numpy !=1.15.0,!=1.16.0
     - pandas >=0.23.0,!=1.0.0
     - prompt-toolkit
-    - pyarrow >=0.17.1,!=1.0.0,<5
-    - python >=3.6
+    - pyarrow >=0.17.1,!=1.0.0
+    - python >=3.8
     - pyyaml
     - simplejson
     - toolz
