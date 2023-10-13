@@ -1,11 +1,11 @@
-About plateau
-=============
+About plateau-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/plateau-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/plateau/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/plateau-feedstock/blob/main/LICENSE.txt)
 
 Summary: A consistent table management library in Python. Flat files, flat land.
 
@@ -144,6 +144,7 @@ Feedstock Maintainers
 =====================
 
 * [@DamianB-BitFlipper](https://github.com/DamianB-BitFlipper/)
+* [@IzerOnadimQC](https://github.com/IzerOnadimQC/)
 * [@janjagusch](https://github.com/janjagusch/)
 * [@xhochy](https://github.com/xhochy/)
 
