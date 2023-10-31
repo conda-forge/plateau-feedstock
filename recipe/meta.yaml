@@ -1,5 +1,5 @@
 {% set name = "plateau" %}
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plateau-{{ version }}.tar.gz
-  sha256: 3fb645903ab69b6fae1d8733c60ce835decdccd366eecea4125115d2d4e9f73b
+  sha256: f8fe59387423649fcb10b205ebea7bcfd0f53010dcf4607c77cc7dcbd5f22e0e
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - msgpack-python >=0.5.2
     - minimalkv >=1.4.2
     - numpy !=1.15.0,!=1.16.0
-    - pandas >=0.23.0,!=1.0.0,<2.1.0
+    - pandas >=0.23.0,!=1.0.0
     - prompt-toolkit
     - pyarrow >=4
     - python >=3.8
