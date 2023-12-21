@@ -1,5 +1,5 @@
 {% set name = "plateau" %}
-{% set version = "4.2.1" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plateau-{{ version }}.tar.gz
-  sha256: f8fe59387423649fcb10b205ebea7bcfd0f53010dcf4607c77cc7dcbd5f22e0e
+  sha256: 7dd6e4fa79e6054db9b090eace582f095fba0aa0fbac60a3b6ed59c45c598b34
 
 build:
   noarch: python
