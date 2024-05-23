@@ -1,5 +1,5 @@
 {% set name = "plateau" %}
-{% set version = "4.3.0" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plateau-{{ version }}.tar.gz
-  sha256: 7dd6e4fa79e6054db9b090eace582f095fba0aa0fbac60a3b6ed59c45c598b34
+  sha256: 75aac62514720a68abd0cc8a5581f93b04ecaccafd5e85f099a2fe6837bcb232
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - attrs
     - click
-    - dask-core !=2021.5.1,!=2021.6.0
+    - dask-core >=2022.5.1
     - decorator
     - msgpack-python >=0.5.2
     - minimalkv >=1.4.2
