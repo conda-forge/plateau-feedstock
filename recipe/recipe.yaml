@@ -1,23 +1,26 @@
-{% set name = "plateau" %}
-{% set version = "4.4.0" %}
+schema_version: 1
+
+context:
+  name: plateau
+  version: 4.4.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plateau-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/plateau-${{ version }}.tar.gz
   sha256: 75aac62514720a68abd0cc8a5581f93b04ecaccafd5e85f099a2fe6837bcb232
 
 build:
+  number: 2
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools-scm
   run:
     - attrs
@@ -30,27 +33,30 @@ requirements:
     - pandas >=0.23.0,!=1.0.0
     - prompt-toolkit
     - pyarrow >=4
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - pyyaml
     - simplejson
     - toolz
     - urlquote >=1.1.3
     - zstandard
 
-test:
-  imports:
-    - plateau
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - plateau
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
 
 about:
-  home: https://pypi.org/project/plateau/
   license: MIT
   license_file: LICENSE.txt
   summary: A consistent table management library in Python. Flat files, flat land.
+  homepage: https://pypi.org/project/plateau/
 
 extra:
   recipe-maintainers:
