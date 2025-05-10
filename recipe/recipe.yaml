@@ -22,6 +22,7 @@ requirements:
     - pip
     - python ${{ python_min }}.*
     - setuptools-scm
+    - setuptools
   run:
     - attrs
     - click
