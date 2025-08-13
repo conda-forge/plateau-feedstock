@@ -41,6 +41,15 @@ requirements:
 test:
   imports:
     - plateau
+    - plateau.serialization
+    - plateau.api
+    - plateau.io
+    - plateau.io_components
+    - plateau.io.dask
+    - plateau.io.testing
+    - plateau.io.eager
+    - plateau.io.iter
+    
   commands:
     - pip check
   requires:
