@@ -1,5 +1,5 @@
 {% set name = "plateau" %}
-{% set version = "4.6.1" %}
+{% set version = "4.6.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/97/ba/71ba1a897d511c743f0e4cc05649ce1cb20ee1a4a9722851f71bf84fa3ab/plateau-{{ version }}.tar.gz
-  sha256: dde0a665625afe6a6803274874b35b5aea5bf30d6672837f3884e1129f66b06a
+  url: https://files.pythonhosted.org/packages/2f/e7/b21cfa3ecd0125163c56cc62c60851e9c5743583a5f28b55c06767937c99/plateau-{{ version }}.tar.gz
+  sha256: da14c588a5000de6faa892ea91837ceef42e8efa1bfcfbce6c99097cb412782c
 
 build:
   noarch: python
@@ -49,7 +49,7 @@ test:
     - plateau.io.testing
     - plateau.io.eager
     - plateau.io.iter
-    
+
   commands:
     - pip check
   requires:
